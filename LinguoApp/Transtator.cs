@@ -4,10 +4,10 @@ namespace LinguoApp
 {
 	public static class Transtator
 	{
-		private static Dictionary<char, char> SimpleReplace = new Dictionary<char, char>
+		private static Dictionary<string, string> SimpleReplace = new Dictionary<string, string>
 		{
-			{ 'Ą', 'Ѫ' }, { 'a', 'ѫ' },
-
+			{ "Szcz", "Щ" },
+			{ "Ą", "Ѫ" }, { "a", "ѫ" },
 		};
 
 		public static string Translate(string input)
