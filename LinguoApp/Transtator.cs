@@ -6,8 +6,9 @@ namespace LinguoApp
 	{
 		private static Dictionary<string, string> SimpleReplace = new Dictionary<string, string>
 		{
-			{ "Szcz", "Щ" },
-			{ "Ą", "Ѫ" }, { "a", "ѫ" },
+			{ "Szcz", "Щ" }, { "szcz", "щ" },
+
+            { "Ą", "Ѫ" }, { "ą", "ѫ" },
 		};
 
 		public static string Translate(string input)
