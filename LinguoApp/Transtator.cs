@@ -6,8 +6,14 @@ namespace LinguoApp
 	{
 		private static Dictionary<string, string> SimpleReplace = new Dictionary<string, string>
 		{
-			{ "Szcz", "Щ" }, { "szcz", "щ" },
+            { "Szczy", "Щи" }, { "szczy", "щи" },
+            { "Szcze", "Ще" }, { "szcze", "ще" },
+            { "Szcz", "Щ" }, { "szcz", "щ" },
+            { "Szy", "Ши" }, { "szy", "ши" },
+            { "Sze", "Ше" }, { "sze", "ше" },
             { "Sz", "Ш" }, { "sz", "ш" },
+            { "Czy", "Чи" }, { "czy", "чи" },
+            { "Cze", "Че" }, { "cze", "че" },
             { "Cz", "Ч" }, { "cz", "ч" },
             { "Ch", "Х" }, { "ch", "х" },
             { "A", "а" }, { "a", "а" },
@@ -40,6 +46,8 @@ namespace LinguoApp
             { "Y", "Ы" }, { "y", "ы" },
             { "Z", "З" }, { "z", "з" },
             { "Ź", "Зь" }, { "ź", "зь" },
+            { "Ży", "Жи" }, { "ży", "жи" },
+            { "Że", "Же" }, { "że", "же" },
             { "Ż", "Ж" }, { "ż", "ж" },
         };
 
