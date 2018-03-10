@@ -5,20 +5,20 @@ namespace LinguoApp
 {
 	public static class TranslatorPolishCyrillic
 	{
-		private const string PolishAlphabet = "AaĄąBbCcChchCzczĆćDdDźdźEeĘęFfGgHhIiJjKkLlŁłMmNnŃńOoÓóPpRrRzrzSsSzszŚśTtUuWwYyZzŹźŻż";
-		private const string PolishConsonants = "AaĄąEeĘęOoÓóUuYyIi";
-		private const string PolishVowels = "BbCcChchCzczĆćDdDźdźFfGgHhKkLlŁłMmNnŃńPpRrRzrzSsSzszŚśTtWwZzŹźŻż";
+		private const string LatinAlphabet = "AaĄąBbCcChchCzczĆćDdDźdźEeĘęFfGgHhIiJjKkLlŁłMmNnŃńOoÓóPpRrRzrzSsSzszŚśTtUuWwYyZzŹźŻż";
+		private const string LatinConsonants = "AaĄąEeĘęOoÓóUuYyIi";
+		private const string LatinVowels = "BbCcChchCzczĆćDdDźdźFfGgHhKkLlŁłMmNnŃńPpRrRzrzSsSzszŚśTtWwZzŹźŻż";
 
 		private static Dictionary<string, string> RegexReplace = new Dictionary<string, string>
 		{
-            { "[V]Ja", "ъя" }, { "[V]ja", "ъя" },
-            { "[V]Ją", "ъѭ" }, { "[V]ją", "ъѭ" },
-            { "[V]Je", "ъе" }, { "[V]je", "ъе" },
-            { "[V]Ję", "ъѩ" }, { "[V]ję", "ъѩ" },
-            { "[V]Jo", "ъё" }, { "[V]jo", "ъё" },
-            { "[V]Jó", "ъé" }, { "[V]jó", "ъé" },
-            { "[V]Ju", "ъю" }, { "[V]ju", "ъю" },
-            { "[V]Ji", "ъї" }, { "[V]ji", "ъї" },         
+            { "[V]JA", "ЪЯ" }, { "[V]ja", "ъя" },
+            { "[V]JĄ", "ЪѬ" }, { "[V]ją", "ъѭ" },
+            { "[V]JE", "ЪЕ" }, { "[V]je", "ъе" },
+            { "[V]JĘ", "ЪѨ" }, { "[V]ję", "ъѩ" },
+            { "[V]JO", "ЪЁ" }, { "[V]jo", "ъё" },
+            { "[V]JÓ", "ЪÉ" }, { "[V]jó", "ъé" },
+            { "[V]JU", "ЪЮ" }, { "[V]ju", "ъю" },
+            { "[V]JI", "ЪЇ" }, { "[V]ji", "ъї" },         
         };
 
 		private static Dictionary<string, string> SimpleReplace = new Dictionary<string, string>
