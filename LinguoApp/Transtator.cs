@@ -1,12 +1,24 @@
 ﻿using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace LinguoApp
 {
 	public static class Transtator
 	{
+		private const string PolishAlphabet = "AaĄąBbCcChchCzczĆćDdDźdźEeĘęFfGgHhIiJjKkLlŁłMmNnŃńOoÓóPpRrRzrzSsSzszŚśTtUuWwYyZzŹźŻż";
+		private const string PolishConsonants = "AaĄąEeĘęOoÓóUuYyIi";
+		private const string PolishVowels = "BbCcChchCzczĆćDdDźdźFfGgHhKkLlŁłMmNnŃńPpRrRzrzSsSzszŚśTtWwZzŹźŻż";
+
+		private static Dictionary<string, string> RegexReplace = new Dictionary<string, string>
+		{
+			{ "^Ja", "Я" }, { "^ja", "я" }, { "[C]Ja", "Я" }, { "[C]ja", "я" },
+			{ "[V]J", "ъ" }, { "[V]j", "ъ" },
+			{ "[V]Ia", "я" }, { "[V]ia", "я" }
+		};
+
 		private static Dictionary<string, string> SimpleReplace = new Dictionary<string, string>
 		{
-            { "Rza", "Ря" }, { "rza", "ря" },
+			{ "Rza", "Ря" }, { "rza", "ря" },
             { "Rzą", "Рѭ" }, { "rzą", "рѭ" },
             { "Rze", "Ре" }, { "rze", "ре" },
             { "Rzę", "Рѩ" }, { "rzę", "рѩ" },
@@ -81,6 +93,21 @@ namespace LinguoApp
 		public static string Translate(string input)
 		{
 			var result = input;
+
+			foreach (var entry in RegexReplace)
+			{
+				var pattern = entry.Key;
+
+				pattern = pattern.Replace("[C]", string.Format("([{0}])", PolishConsonants));
+				pattern = pattern.Replace("[^C]", string.Format("([^{0}])", PolishConsonants));
+				pattern = pattern.Replace("[V]", string.Format("([{0}])", PolishVowels));
+				pattern = pattern.Replace("[^V]", string.Format("([^{0}])", PolishVowels));
+
+				foreach (Match match in Regex.Matches(result, pattern))
+				{
+					result = result.Replace(match.Groups[0].Value, match.Groups[1] + entry.Value);
+				}
+			}
 
 			foreach (var entry in SimpleReplace)
 			{
