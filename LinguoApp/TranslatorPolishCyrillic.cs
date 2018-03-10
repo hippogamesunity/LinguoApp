@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 
 namespace LinguoApp
 {
-	public static class Transtator
+	public static class TranslatorPolishCyrillic
 	{
 		private const string PolishAlphabet = "AaĄąBbCcChchCzczĆćDdDźdźEeĘęFfGgHhIiJjKkLlŁłMmNnŃńOoÓóPpRrRzrzSsSzszŚśTtUuWwYyZzŹźŻż";
 		private const string PolishConsonants = "AaĄąEeĘęOoÓóUuYyIi";
@@ -18,8 +18,7 @@ namespace LinguoApp
             { "[V]Jo", "ъё" }, { "[V]jo", "ъё" },
             { "[V]Jó", "ъé" }, { "[V]jó", "ъé" },
             { "[V]Ju", "ъю" }, { "[V]ju", "ъю" },
-            { "[V]Ji", "ъї" }, { "[V]ji", "ъї" },
-         
+            { "[V]Ji", "ъї" }, { "[V]ji", "ъї" },         
         };
 
 		private static Dictionary<string, string> SimpleReplace = new Dictionary<string, string>
@@ -123,8 +122,7 @@ namespace LinguoApp
             { "Цѩ", "Тѩ" }, { "цѩ", "тѩ" },
             { "Цё", "Тё" }, { "цё", "тё" },
             { "Цé", "Тé" }, { "цé", "тé" },
-            { "Цю", "Тю" }, { "цю", "тю" },
-           
+            { "Цю", "Тю" }, { "цю", "тю" },           
         };
 
 		public static string Translate(string input)

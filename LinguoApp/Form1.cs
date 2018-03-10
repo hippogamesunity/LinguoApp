@@ -5,6 +5,8 @@ namespace LinguoApp
 {
 	public partial class Form1 : Form
 	{
+		private int _direction;
+
 		public Form1()
 		{
 			InitializeComponent();
@@ -12,12 +14,36 @@ namespace LinguoApp
 
 		private void textBox1_TextChanged(object sender, EventArgs e)
 		{
-			textBox2.Text = Transtator.Translate(textBox1.Text);
+			Translate();
 		}
 
-		private void textBox2_TextChanged(object sender, EventArgs e)
+		private void radioButton1_CheckedChanged(object sender, EventArgs e)
 		{
+			if ((sender as RadioButton).Checked)
+			{
+				_direction = 0;
+			}
+			else
+			{
+				_direction = 1;
+			}
 
+			Translate();
+		}
+
+		private void Translate()
+		{
+			switch (_direction)
+			{
+				case 0:
+					textBox2.Text = TranslatorPolishCyrillic.Translate(textBox1.Text);
+					break;
+				case 1:
+					textBox2.Text = TranslatorCyrillicPolish.Translate(textBox1.Text);
+					break;
+				default:
+					throw new NotImplementedException();
+			}
 		}
 	}
 }
