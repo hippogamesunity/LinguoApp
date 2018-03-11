@@ -133,10 +133,10 @@ namespace LinguoApp
 			{
 				var pattern = entry.Key;
 
-				pattern = pattern.Replace("[C]", string.Format("([{0}])", PolishConsonants));
-				pattern = pattern.Replace("[^C]", string.Format("([^{0}])", PolishConsonants));
-				pattern = pattern.Replace("[V]", string.Format("([{0}])", PolishVowels));
-				pattern = pattern.Replace("[^V]", string.Format("([^{0}])", PolishVowels));
+				pattern = pattern.Replace("[C]", string.Format("([{0}])", LatinConsonants));
+				pattern = pattern.Replace("[^C]", string.Format("([^{0}])", LatinConsonants));
+				pattern = pattern.Replace("[V]", string.Format("([{0}])", LatinVowels));
+				pattern = pattern.Replace("[^V]", string.Format("([^{0}])", LatinVowels));
 
 				foreach (Match match in Regex.Matches(result, pattern))
 				{
