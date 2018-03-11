@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 
 namespace LinguoApp
 {
-	public static class TranslatorPolishCyrillic
+	public static class TranslatorLatinCyrillic
 	{
 		private const string LatinAlphabet = "AaĄąBbCcChchCzczĆćDdDźdźEeĘęFfGgHhIiJjKkLlŁłMmNnŃńOoÓóPpRrRzrzSsSzszŚśTtUuWwYyZzŹźŻż";
 		private const string LatinConsonants = "AaĄąEeĘęOoÓóUuYyIi";
@@ -89,7 +89,6 @@ namespace LinguoApp
             { "C", "Ц" }, { "c", "ц" },
             { "Ć", "Ть" }, { "ć", "ть" },
             { "D", "Д" }, { "d", "д" },
-            { "E", "Э" }, { "e", "э" },
             { "Ę", "Ѧ" }, { "ę", "ѧ" },
             { "F", "Ф" }, { "f", "ф" },
             { "G", "Г" }, { "g", "г" },
@@ -115,14 +114,8 @@ namespace LinguoApp
             { "Ży", "Жи" }, { "ży", "жи" },
             { "Że", "Же" }, { "że", "же" },
             { "Y", "Ы" }, { "y", "ы" },
-            { "Ż", "Ж" }, { "ż", "ж" },
-            { "Ця", "Тя" }, { "ця", "тя" },
-            { "Цѭ", "Тѭ" }, { "цѭ", "тѭ" },
-            { "Це", "Те" }, { "це", "те" },
-            { "Цѩ", "Тѩ" }, { "цѩ", "тѩ" },
-            { "Цё", "Тё" }, { "цё", "тё" },
-            { "Цé", "Тé" }, { "цé", "тé" },
-            { "Цю", "Тю" }, { "цю", "тю" },           
+            { "E", "Э" }, { "e", "э" },
+            { "Ż", "Ж" }, { "ż", "ж" },          
         };
 
 		public static string Translate(string input)

@@ -53,8 +53,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TranslatorCyrillicPolish.cs" />
-    <Compile Include="TranslatorPolishCyrillic.cs" />
+    <Compile Include="TranslatorCyrillicLatin.cs" />
+    <Compile Include="TranslatorLatinCyrillic.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
