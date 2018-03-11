@@ -118,7 +118,9 @@ namespace LinguoApp
             { "Ж", "Ż" }, { "ж", "ż" },
             { "Е", "Je" }, { "е", "je" },
             { "Ь", "" }, { "ь", "" },
-        };
+			{ "Ъ", "" }, { "ъ", "" },
+			{ "'", "" },
+		};
 
 		public static string Translate(string input)
 		{
