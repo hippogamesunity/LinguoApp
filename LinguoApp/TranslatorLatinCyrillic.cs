@@ -23,6 +23,7 @@ namespace LinguoApp
 
 		private static Dictionary<string, string> SimpleReplace = new Dictionary<string, string>
 		{
+            { "Klawiatur", "Клявиатур" }, { "klawiatur", "клявиатур" },
             { "Ri", "Ри" }, { "ri", "ри" },
             { "Di", "Ди" }, { "di", "ди" },
             { "Rza", "Ря" }, { "rza", "ря" },
