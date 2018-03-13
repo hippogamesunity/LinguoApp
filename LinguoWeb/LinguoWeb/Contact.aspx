@@ -1,8 +1,8 @@
 ﻿<%@ Page Title="Contact" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="LinguoWeb.Contact" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h2><%: Title %>.</h2>
-    <h3>Your contact page.</h3>
+	<h2>Контакты</h2>
+    <h3>Ту бѧдѫ контакты</h3>
     <address>
         One Microsoft Way<br />
         Redmond, WA 98052-6399<br />
