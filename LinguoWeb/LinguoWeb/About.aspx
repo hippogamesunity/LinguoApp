@@ -1,7 +1,13 @@
-﻿<%@ Page Title="About" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="LinguoWeb.About" %>
+﻿<%@ Page Title="Информацъя" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="LinguoWeb.About" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 	<h2>Информация</h2>
-    <h3>Ту бѧде опис</h3>
-    <p>Ужий тэго обшару, абы подать додатковэ информацъе.</p>
+    <h3>Тэн тлумач зостал створёны през мѩдзысловяньскѫ групѧ "Володаре" 
+		в цэлю усправненя комуникацъї мѩдзы Поляками а ужитковниками 
+		цырылицы (на базе ѩзыка староцэркевнословяньскего). Опера сѩ на 
+		клясычнэй ортографии старословяньскей (не вплыва то на читане).
+		Скопюй тэкст, артыкул люб вядомосьть до тлумача, а настѧпне ужий 
+		го до власных потреб. Есьли зауважиш блѫд тэхничны люб маш пропозыцъѩ, 
+		напиш до нас (патрь дял информацыйны).</h3>
+    
 </asp:Content>
