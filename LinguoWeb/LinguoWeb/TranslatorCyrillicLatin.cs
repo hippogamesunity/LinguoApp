@@ -7,7 +7,7 @@ namespace LinguoApp
 	{
 		private const string CyrillichAlphabet = "АаБбВвГгҐґДдЕеЁёÉéЖжЗзИиЙйЇїКкЛлМмНнОоÓóПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЮюѪѫѬѭЭэѦѧѨѩЯя";
 		private const string CyrillicConsonants = "АаЕеЁёÉéИиЇїОоÓóУуЫыЮюѪѫѬѭЭэѦѧѨѩЯя";
-		private const string CyrillicVowels = "БбВвГгҐґДдЖжЗзКкЛлМмНнПпРрСсТтФфХхЦцЧчШшЩщ";
+		private const string CyrillicVowels = "БбВвГгҐґДдЖжЗзКкМмНнПпСсФфХхЦц";
 
                 private static Dictionary<string, string> RegexReplace = new Dictionary<string, string>
 		{
