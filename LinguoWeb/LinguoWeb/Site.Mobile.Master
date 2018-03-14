@@ -9,7 +9,10 @@
     <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
 </head>
 <body>
-    <form id="form1" runat="server">
+<form id="form1" runat="server">
+    <div>
+        <a runat="server" href="~/">Главная</a> | <a runat="server" href="~/About">Информация</a> | <a runat="server" href="~/Contact">Связаться</a>
+    </div>
     <div>
         <h1>Транслятор</h1>
         <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
@@ -18,6 +21,6 @@
         </section>
         <friendlyUrls:ViewSwitcher runat="server" />
     </div>
-    </form>
+</form>
 </body>
 </html>
