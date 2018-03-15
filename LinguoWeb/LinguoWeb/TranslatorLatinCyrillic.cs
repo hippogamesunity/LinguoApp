@@ -6,7 +6,7 @@ namespace LinguoApp
 	public static class TranslatorLatinCyrillic
 	{
 		private const string LatinAlphabet = "AaĄąBbCcChchCzczĆćDdDźdźEeĘęFfGgHhIiJjKkLlŁłMmNnŃńOoÓóPpRrRzrzSsSzszŚśTtUuWwYyZzŹźŻż";
-		private const string LatinConsonants = "AaĄąEeĘęOoÓóUuYyIi";
+		private const string LatinConsonants = "Aa";
 		private const string LatinVowels = "BbCcChchCzczĆćDdDźdźFfGgHhKkLlŁłMmNnŃńPpRrRzrzSsSzszŚśTtWwZzŹźŻż";
 
 		private static Dictionary<string, string> RegexReplace = new Dictionary<string, string>
@@ -18,7 +18,7 @@ namespace LinguoApp
             { "[V]JO", "ЪЁ" }, { "[V]jo", "ъё" },
             { "[V]JÓ", "ЪÉ" }, { "[V]jó", "ъé" },
             { "[V]JU", "ЪЮ" }, { "[V]ju", "ъю" },
-            { "[V]JI", "ЪЇ" }, { "[V]ji", "ъї" },         
+            { "[V]JI", "ЪЇ" }, { "[V]ji", "ъї" },
         };
 
 		private static Dictionary<string, string> SimpleReplace = new Dictionary<string, string>
@@ -83,7 +83,7 @@ namespace LinguoApp
             { "Cze", "Че" }, { "cze", "че" },
             { "Cz", "Ч" }, { "cz", "ч" },
             { "Ch", "Х" }, { "ch", "х" },
-            { "A", "а" }, { "a", "а" },
+            { "A", "А" }, { "a", "а" },
             { "Ą", "Ѫ" }, { "ą", "ѫ" },
             { "B", "Б" }, { "b", "б" },
             { "C", "Ц" }, { "c", "ц" },
