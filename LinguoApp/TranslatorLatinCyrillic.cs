@@ -129,7 +129,7 @@ namespace LinguoApp
 
 			foreach (Match match in Regex.Matches(result, @"([IÎVX]+)(\W+|$)"))
 			{
-				result = result.Replace(match.Groups[1].Value, "[Roman:" + match.Groups[1] + "]");
+				result = result.Replace(match.Groups[1].Value, "[Римская:" + match.Groups[1] + "]");
 			}
 
 			foreach (var entry in RegexReplace)
