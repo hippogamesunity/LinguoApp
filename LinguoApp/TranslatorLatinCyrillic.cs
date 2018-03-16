@@ -23,7 +23,8 @@ namespace LinguoApp
 
 		private static Dictionary<string, string> SimpleReplace = new Dictionary<string, string>
 		{
-            { "Klawiatur", "Клявиатур" }, { "klawiatur", "клявиатур" },
+			{ "[Roman:IV]", "[Римская:5]" },
+			{ "Klawiatur", "Клявиатур" }, { "klawiatur", "клявиатур" },
             { "Ri", "Ри" }, { "ri", "ри" },
             { "Di", "Ди" }, { "di", "ди" },
             { "Rza", "Ря" }, { "rza", "ря" },
@@ -118,12 +119,18 @@ namespace LinguoApp
             { "Że", "Же" }, { "że", "же" },
             { "Y", "Ы" }, { "y", "ы" },
             { "E", "Э" }, { "e", "э" },
-            { "Ż", "Ж" }, { "ż", "ж" },          
+            { "Ż", "Ж" }, { "ż", "ж" },         
+			{ "[Римская:5]", "IV" },
         };
 
 		public static string Translate(string input)
 		{
 			var result = input;
+
+			foreach (Match match in Regex.Matches(result, @"([IÎVX]+)(\W+|$)"))
+			{
+				result = result.Replace(match.Groups[1].Value, "[Roman:" + match.Groups[1] + "]");
+			}
 
 			foreach (var entry in RegexReplace)
 			{

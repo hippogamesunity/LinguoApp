@@ -9,7 +9,7 @@ namespace LinguoApp
 		private const string CyrillicConsonants = "АаЕеЁёÉéИиЇїОоÓóУуЫыЮюѪѫѬѭЭэѦѧѨѩЯя";
 		private const string CyrillicVowels = "БбВвГгҐґЖжЗзКкМмНнПпСсФфХхЦц";
 
-                private static Dictionary<string, string> RegexReplace = new Dictionary<string, string>
+		private static Dictionary<string, string> RegexReplace = new Dictionary<string, string>
 		{
             { "[V]Я", "IA" }, { "[V]я", "ia" },
             { "[V]Ѭ", "IĄ" }, { "[V]ѭ", "ią" },
@@ -23,6 +23,7 @@ namespace LinguoApp
 
 		private static Dictionary<string, string> SimpleReplace = new Dictionary<string, string>
 		{
+			{ "[Roman:IV]", "[Roman:5]" },
             { "Клявиатур", "Klawiatur" }, { "клявиатур", "klawiatur" },
             { "Риа", "Ria" }, { "риа", "ria" },
             { "Диа", "Dia" }, { "диа", "dia" },
@@ -116,12 +117,17 @@ namespace LinguoApp
             { "Е", "Je" }, { "е", "je" },
             { "Ь", "" }, { "ь", "" },
 			{ "Ъ", "" }, { "ъ", "" },
-			{ "'", "" },
+			{ "[Roman:5]", "IV" },
 		};
 
 		public static string Translate(string input)
 		{
 			var result = input;
+
+			foreach (Match match in Regex.Matches(result, @"([IÎVX])+\W"))
+			{
+				result = result.Replace(match.Groups[0].Value, "[Roman:" + match.Groups[1] + "]");
+			}
 
 			foreach (var entry in RegexReplace)
 			{
