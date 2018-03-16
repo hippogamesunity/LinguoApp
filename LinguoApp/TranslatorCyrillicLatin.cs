@@ -124,9 +124,9 @@ namespace LinguoApp
 		{
 			var result = input;
 
-			foreach (Match match in Regex.Matches(result, @"([IÎVX])+\W"))
+			foreach (Match match in Regex.Matches(result, @"([IÎVX]+)(\W+|$)"))
 			{
-				result = result.Replace(match.Groups[0].Value, "[Roman:" + match.Groups[1] + "]");
+				result = result.Replace(match.Groups[1].Value, "[Roman:" + match.Groups[1] + "]");
 			}
 
 			foreach (var entry in RegexReplace)
