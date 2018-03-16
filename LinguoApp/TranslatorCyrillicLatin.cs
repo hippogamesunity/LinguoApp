@@ -23,7 +23,6 @@ namespace LinguoApp
 
 		private static Dictionary<string, string> SimpleReplace = new Dictionary<string, string>
 		{
-			{ "[Roman:IV]", "[Roman:5]" },
             { "Клявиатур", "Klawiatur" }, { "клявиатур", "klawiatur" },
             { "Риа", "Ria" }, { "риа", "ria" },
             { "Диа", "Dia" }, { "диа", "dia" },
@@ -116,18 +115,14 @@ namespace LinguoApp
             { "Ж", "Ż" }, { "ж", "ż" },
             { "Е", "Je" }, { "е", "je" },
             { "Ь", "" }, { "ь", "" },
-			{ "Ъ", "" }, { "ъ", "" },
-			{ "[Roman:5]", "IV" },
+			{ "Ъ", "" }, { "ъ", "" }
 		};
 
 		public static string Translate(string input)
 		{
 			var result = input;
 
-			foreach (Match match in Regex.Matches(result, @"([IÎVX]+)(\W+|$)"))
-			{
-				result = result.Replace(match.Groups[1].Value, "[Roman:" + match.Groups[1] + "]");
-			}
+			result = ReplaceRomanNumbers(result);
 
 			foreach (var entry in RegexReplace)
 			{
@@ -147,6 +142,34 @@ namespace LinguoApp
 			foreach (var entry in SimpleReplace)
 			{
 				result = result.Replace(entry.Key, entry.Value);
+			}
+
+			result = RestoreRomanNumbers(result);
+
+			return result;
+		}
+
+		private static readonly Dictionary<int, string> Romans = new Dictionary<int, string>();
+
+		private static string ReplaceRomanNumbers(string result)
+		{
+			foreach (Match match in Regex.Matches(result, @"([IÎVX]+)(\W+|$)"))
+			{
+				var hash = match.Groups[1].GetHashCode();
+
+				if (!Romans.ContainsKey(hash)) Romans.Add(hash, match.Groups[1].Value);
+
+				result = result.Replace(match.Groups[1].Value, "[#" + hash + "]");
+			}
+
+			return result;
+		}
+
+		private static string RestoreRomanNumbers(string result)
+		{
+			foreach (Match match in Regex.Matches(result, @"\[#(\d+)\]"))
+			{
+				result = result.Replace(match.Groups[0].Value, Romans[int.Parse(match.Groups[1].Value)]);
 			}
 
 			return result;
