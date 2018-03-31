@@ -7,7 +7,7 @@ namespace LinguoApp
 	{
 		private const string LatinAlphabet = "AaĄąBbCcChchCzczĆćDdDźdźEeĘęFfGgHhIiJjKkLlŁłMmNnŃńOoÓóPpRrRzrzSsSzszŚśTtUuWwYyZzŹźŻż";
 		private const string LatinConsonants = "Aa";
-		private const string LatinVowels = "BbCcChchCzczĆćDdDźdźFfGgHhKkLlŁłMmNnŃńPpRrRzrzSsSzszŚśTtWwZzŹźŻż";
+		private const string LatinVowels = "BbCcChchCzczĆćFfGgHhKkLlŁłMmNnŃńPpRrRzrzSsSzszŚśTtWwZzŹźŻż";
 
 		private static Dictionary<string, string> RegexReplace = new Dictionary<string, string>
 		{
@@ -23,7 +23,11 @@ namespace LinguoApp
 
 		private static Dictionary<string, string> SimpleReplace = new Dictionary<string, string>
 		{
-			{ "Rza", "Ря" }, { "rza", "ря" },
+            { "Klawiatur", "Клавіатур" }, { "klawiatur", "клавіатур" },
+            { "Histori", "ґисторі" }, { "histori", "ґисторі" },
+            { "Dialekt", "Діалект" }, { "dialekt", "діалект" },
+            { "Dialog", "Діалог" }, { "dialog", "діалог" },
+            { "Rza", "Ря" }, { "rza", "ря" },
             { "Rzą", "Рѭ" }, { "rzą", "рѭ" },
             { "Rze", "Ре" }, { "rze", "ре" },
             { "Rzę", "Рѩ" }, { "rzę", "рѩ" },
