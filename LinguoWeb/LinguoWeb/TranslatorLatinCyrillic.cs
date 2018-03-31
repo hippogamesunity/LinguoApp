@@ -26,7 +26,7 @@ namespace LinguoApp
             { "Klawiatur", "Клавіатур" }, { "klawiatur", "клавіатур" },
             { "Histori", "ґисторі" }, { "histori", "ґисторі" },
             { "Dialekt", "Діалект" }, { "dialekt", "діалект" },
-            { "Dialog", "Діалог" }, { "dialog", "діалог" },
+            { "Dialog", "Діалёг" }, { "dialog", "діалёг" },
             { "Rza", "Ря" }, { "rza", "ря" },
             { "Rzą", "Рѭ" }, { "rzą", "рѭ" },
             { "Rze", "Ре" }, { "rze", "ре" },
