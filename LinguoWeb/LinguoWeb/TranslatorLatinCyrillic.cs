@@ -24,6 +24,11 @@ namespace LinguoApp
 		private static Dictionary<string, string> SimpleReplace = new Dictionary<string, string>
 		{
             { "Klawiatur", "Клавіатур" }, { "klawiatur", "клавіатур" },
+            { "Awia", "Авіа" }, { "awia", "авіа" },
+            { "Wiadukt", "Віадукт" }, { "wiadukt", "віадукт" },
+            { "Fiak", "Фіак" }, { "fiak", "фіак" },
+            { "Fiolet", "Фіолет" }, { "fiolet", "фіолет" },
+            { "Fioł", "Фіол" }, { "fioł", "фіол" },
             { "Histori", "ґисторі" }, { "histori", "ґисторі" },
             { "Dialekt", "Діалект" }, { "dialekt", "діалект" },
             { "Dialog", "Діалёг" }, { "dialog", "діалёг" },
@@ -32,7 +37,7 @@ namespace LinguoApp
             { "Awiotechnik", "Авіотэхник" }, { "awiotechnik", "авіотэхник" },
             { "Biografi", "Біографі" }, { "biografi", "біографі" },
             { "Biologi", "Біолёгі" }, { "biologi", "біолёгі" },
-            { "Pianin", "Піанин" }, { "pianin", "піанин" },
+            { "Piani", "Піани" }, { "piani", "піани" },
             { "Pionier", "Піонер" }, { "pionier", "піонер" },
             { "Patriot", "патріот" }, { "patriot", "патріот" },
             { "Rza", "Ря" }, { "rza", "ря" },
