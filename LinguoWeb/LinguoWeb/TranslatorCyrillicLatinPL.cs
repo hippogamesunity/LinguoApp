@@ -3,13 +3,12 @@ using System.Text.RegularExpressions;
 
 namespace LinguoApp
 {
-	public static class TranslatorCyrillicLatin
+	public static class TranslatorCyrillicLatinPL
 	{
-		private const string CyrillichAlphabet = "АаБбВвГгҐґДдЕеЁёÉéЖжЗзИиЙйЇїКкЛлМмНнОоÓóПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЮюѪѫѬѭЭэѦѧѨѩЯя";
 		private const string CyrillicConsonants = "АаЕеЁёÉéИиЇїОоÓóУуЫыЮюѪѫѬѭЭэѦѧѨѩЯя";
-		private const string CyrillicVowels = "БбВвГгҐґДдЗзКкМмНнПпСсФфХхЦц";
+		private const string CyrillicVowels = "БбВвГгҐґЖжЗзКкМмНнПпСсФфХхЦц";
 
-                private static Dictionary<string, string> RegexReplace = new Dictionary<string, string>
+		private static Dictionary<string, string> RegexReplace = new Dictionary<string, string>
 		{
             { "[V]Я", "IA" }, { "[V]я", "ia" },
             { "[V]Ѭ", "IĄ" }, { "[V]ѭ", "ią" },
@@ -23,6 +22,11 @@ namespace LinguoApp
 
 		private static Dictionary<string, string> SimpleReplace = new Dictionary<string, string>
 		{
+            { "Клявиатур", "Klawiatur" }, { "клявиатур", "klawiatur" },
+            { "Риа", "Ria" }, { "риа", "ria" },
+            { "Диа", "Dia" }, { "диа", "dia" },
+            { "Рио", "Rio" }, { "рио", "rio" },
+            { "Дио", "Dio" }, { "дио", "dio" },
             { "Ря", "Rza" }, { "ря", "rza" },
             { "Рѭ", "Rzą" }, { "рѭ", "rzą" },
             { "Ре", "Rze" }, { "ре", "rze" },
@@ -58,14 +62,6 @@ namespace LinguoApp
             { "Рь", "Rz" }, { "рь", "rz" },
             { "Дь", "Dź" }, { "дь", "dź" },
             { "Ль", "L" }, { "ль", "l" },
-            { "ЪЯ", "JA" }, { "ъя", "ja" },
-            { "ЪѬ", "JĄ" }, { "ъѭ", "ją" },
-            { "ЪЕ", "JE" }, { "ъе", "je" },
-            { "ЪѨ", "JĘ" }, { "ъѩ", "ję" },
-            { "ЪЁ", "JO" }, { "ъё", "jo" },
-            { "ЪÉ", "JÓ" }, { "ъé", "jó" },
-            { "ЪЮ", "JU" }, { "ъю", "ju" },
-            { "ЪЇ", "JI" }, { "ъї", "ji" },
             { "Я", "Ja" }, { "я", "ja" },
             { "Ѭ", "Ją" }, { "ѭ", "ją" },
             { "Ѩ", "Ję" }, { "ѩ", "ję" },
@@ -115,12 +111,10 @@ namespace LinguoApp
             { "Жи", "Ży" }, { "жи", "ży" },
             { "Же", "Żе" }, { "же", "że" },
             { "И", "I" }, { "и", "i" },
-            { "І", "I" }, { "і", "i" },
             { "Ж", "Ż" }, { "ж", "ż" },
             { "Е", "Je" }, { "е", "je" },
             { "Ь", "" }, { "ь", "" },
-			{ "Ъ", "" }, { "ъ", "" },
-			{ "'", "" },
+			{ "Ъ", "" }, { "ъ", "" }
 		};
 
 		public static string Translate(string input)

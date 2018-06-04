@@ -3,10 +3,18 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <table>
         <tr>
+            <td style="text-align: left" colspan="2">
+            Select language:
+                <br />
+            <asp:DropDownList ID="DropDownList1" runat="server">
+                <asp:ListItem>Polish</asp:ListItem>
+                <asp:ListItem>Czech</asp:ListItem>
+            </asp:DropDownList>
+            <tr>
             <td style="text-align: center">
-                Łacina</td>
+                Latin</td>
             <td style="text-align: center">
-                Цырылица</td>
+                Cyrillic</td>
         </tr>
         <tr>
             <td>
@@ -18,10 +26,10 @@
         </tr>
         <tr>
             <td>
-                <asp:Button ID="Button1" runat="server" Width="400px" Height="40px" OnClick="Button1_Click" Text="Przetłumacz" />
+                <asp:Button ID="Button1" runat="server" Width="400px" Height="40px" OnClick="Button1_Click" Text="Translate" />
             </td>
             <td>
-                <asp:Button ID="Button2" runat="server" Width="400px" Height="40px" OnClick="Button2_Click" Text="Претлумачь" />
+                <asp:Button ID="Button2" runat="server" Width="400px" Height="40px" OnClick="Button2_Click" Text="Translate" />
             </td>
         </tr>
     </table>

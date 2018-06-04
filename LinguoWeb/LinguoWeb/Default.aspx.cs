@@ -8,12 +8,34 @@ namespace LinguoWeb
 	{
 		protected void Button1_Click(object sender, EventArgs e)
 		{
-			TextBox2.Text = TranslatorLatinCyrillic.Translate(TextBox1.Text);
+			switch (DropDownList1.SelectedIndex)
+			{
+				case 0:
+					TextBox2.Text = TranslatorLatinCyrillicPL.Translate(TextBox1.Text);
+					break;
+				case 1:
+					TextBox2.Text = TranslatorLatinCyrillicCZ.Translate(TextBox1.Text);
+					break;
+				default:
+					TextBox2.Text = "Language is not supported.";
+					break;
+			}
 		}
 
 		protected void Button2_Click(object sender, EventArgs e)
 		{
-			TextBox1.Text = TranslatorCyrillicLatin.Translate(TextBox2.Text);
+			switch (DropDownList1.SelectedIndex)
+			{
+				case 0:
+					TextBox2.Text = TranslatorCyrillicLatinPL.Translate(TextBox1.Text);
+					break;
+				case 1:
+					TextBox2.Text = TranslatorCyrillicLatinCZ.Translate(TextBox1.Text);
+					break;
+				default:
+					TextBox2.Text = "Language is not supported.";
+					break;
+			}
 		}
 	}
 }

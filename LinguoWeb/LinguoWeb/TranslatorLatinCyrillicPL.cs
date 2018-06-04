@@ -3,11 +3,10 @@ using System.Text.RegularExpressions;
 
 namespace LinguoApp
 {
-	public static class TranslatorLatinCyrillic
+	public static class TranslatorLatinCyrillicPL
 	{
-		private const string LatinAlphabet = "AaĄąBbCcChchCzczĆćDdDźdźEeĘęFfGgHhIiJjKkLlŁłMmNnŃńOoÓóPpRrRzrzSsSzszŚśTtUuWwYyZzŹźŻż";
-		private const string LatinConsonants = "Aa";
-		private const string LatinVowels = "BbCcChchCzczĆćFfGgHhKkLlŁłMmNnŃńPpRrRzrzSsSzszŚśTtWwZzŹźŻż";
+		private const string LatinConsonants = "AaĄąEeĘęOoÓóUuYyIi";
+		private const string LatinVowels = "BbCcChchCzczĆćDdDźdźFfGgHhKkLlŁłMmNnŃńPpRrRzrzSsSzszŚśTtWwZzŹźŻż";
 
 		private static Dictionary<string, string> RegexReplace = new Dictionary<string, string>
 		{
@@ -18,28 +17,14 @@ namespace LinguoApp
             { "[V]JO", "ЪЁ" }, { "[V]jo", "ъё" },
             { "[V]JÓ", "ЪÉ" }, { "[V]jó", "ъé" },
             { "[V]JU", "ЪЮ" }, { "[V]ju", "ъю" },
-            { "[V]JI", "ЪЇ" }, { "[V]ji", "ъї" },
+            { "[V]JI", "ЪЇ" }, { "[V]ji", "ъї" },         
         };
 
 		private static Dictionary<string, string> SimpleReplace = new Dictionary<string, string>
 		{
-            { "Klawiatur", "Клавіатур" }, { "klawiatur", "клавіатур" },
-            { "Awia", "Авіа" }, { "awia", "авіа" },
-            { "Wiadukt", "Віадукт" }, { "wiadukt", "віадукт" },
-            { "Fiak", "Фіак" }, { "fiak", "фіак" },
-            { "Fiolet", "Фіолет" }, { "fiolet", "фіолет" },
-            { "Fioł", "Фіол" }, { "fioł", "фіол" },
-            { "Histori", "ґисторі" }, { "histori", "ґисторі" },
-            { "Dialekt", "Діалект" }, { "dialekt", "діалект" },
-            { "Dialog", "Діалёг" }, { "dialog", "діалёг" },
-            { "Wariant", "Варіант" }, { "wariant", "Варіант" },
-            { "Biathlon", "Біатґлён" }, { "biathlon", "біатґлён" },
-            { "Awiotechnik", "Авіотэхник" }, { "awiotechnik", "авіотэхник" },
-            { "Biografi", "Біографі" }, { "biografi", "біографі" },
-            { "Biologi", "Біолёгі" }, { "biologi", "біолёгі" },
-            { "Piani", "Піани" }, { "piani", "піани" },
-            { "Pionier", "Піонер" }, { "pionier", "піонер" },
-            { "Patriot", "патріот" }, { "patriot", "патріот" },
+			{ "Klawiatur", "Клявиатур" }, { "klawiatur", "клявиатур" },
+            { "Ri", "Ри" }, { "ri", "ри" },
+            { "Di", "Ди" }, { "di", "ди" },
             { "Rza", "Ря" }, { "rza", "ря" },
             { "Rzą", "Рѭ" }, { "rzą", "рѭ" },
             { "Rze", "Ре" }, { "rze", "ре" },
@@ -100,7 +85,7 @@ namespace LinguoApp
             { "Cze", "Че" }, { "cze", "че" },
             { "Cz", "Ч" }, { "cz", "ч" },
             { "Ch", "Х" }, { "ch", "х" },
-            { "A", "А" }, { "a", "а" },
+            { "A", "а" }, { "a", "а" },
             { "Ą", "Ѫ" }, { "ą", "ѫ" },
             { "B", "Б" }, { "b", "б" },
             { "C", "Ц" }, { "c", "ц" },
@@ -132,7 +117,7 @@ namespace LinguoApp
             { "Że", "Же" }, { "że", "же" },
             { "Y", "Ы" }, { "y", "ы" },
             { "E", "Э" }, { "e", "э" },
-            { "Ż", "Ж" }, { "ż", "ж" },          
+            { "Ż", "Ж" }, { "ż", "ж" }
         };
 
 		public static string Translate(string input)
