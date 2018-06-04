@@ -3,9 +3,8 @@ using System.Text.RegularExpressions;
 
 namespace LinguoApp
 {
-	public static class TranslatorCyrillicLatin
+	public static class TranslatorCyrillicLatinPL
 	{
-		private const string CyrillichAlphabet = "АаБбВвГгҐґДдЕеЁёÉéЖжЗзИиЙйЇїКкЛлМмНнОоÓóПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЮюѪѫѬѭЭэѦѧѨѩЯя";
 		private const string CyrillicConsonants = "АаЕеЁёÉéИиЇїОоÓóУуЫыЮюѪѫѬѭЭэѦѧѨѩЯя";
 		private const string CyrillicVowels = "БбВвГгҐґЖжЗзКкМмНнПпСсФфХхЦц";
 

@@ -36,10 +36,16 @@ namespace LinguoApp
 			switch (_direction)
 			{
 				case 0:
-					textBox2.Text = TranslatorLatinCyrillic.Translate(textBox1.Text);
+					textBox2.Text = TranslatorLatinCyrillicPL.Translate(textBox1.Text);
 					break;
 				case 1:
-					textBox2.Text = TranslatorCyrillicLatin.Translate(textBox1.Text);
+					textBox2.Text = TranslatorCyrillicLatinPL.Translate(textBox1.Text);
+					break;
+				case 2:
+					textBox2.Text = TranslatorLatinCyrillicCZ.Translate(textBox1.Text);
+					break;
+				case 3:
+					textBox2.Text = TranslatorCyrillicLatinCZ.Translate(textBox1.Text);
 					break;
 				default:
 					throw new NotImplementedException();
