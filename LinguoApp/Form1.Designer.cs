@@ -82,6 +82,7 @@
 			this.radioButton2.Tag = "Direction";
 			this.radioButton2.Text = "Cyrillic>Polish";
 			this.radioButton2.UseVisualStyleBackColor = true;
+			this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
 			// 
 			// radioButton3
 			// 
@@ -93,6 +94,7 @@
 			this.radioButton3.Tag = "Direction";
 			this.radioButton3.Text = "Czech>Cyrillic";
 			this.radioButton3.UseVisualStyleBackColor = true;
+			this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
 			// 
 			// radioButton4
 			// 
@@ -104,6 +106,7 @@
 			this.radioButton4.Tag = "Direction";
 			this.radioButton4.Text = "Cyrillic>Czech";
 			this.radioButton4.UseVisualStyleBackColor = true;
+			this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
 			// 
 			// Form1
 			// 
