@@ -6,7 +6,7 @@ namespace LinguoApp
 	public static class TranslatorLatinCyrillicCZ
 	{
 		private const string LatinConsonants = "AaÁáEeÉéĚěOoÓóUuÚúŮůYyÝýIiÍí";
-		private const string LatinVowels = "BbCcČčChchDdĎďFfGgHhKkLlMmNnŇňPpQqŘřSsŠšTtŤťVvWwŽž";
+		private const string LatinVowels = "BbCcČčChchDdĎďFfGgHhKkLlMmNnŇňPpQqŘřSsŠšTtŤťVvWwZzŽž";
 
 		private static Dictionary<string, string> RegexReplace = new Dictionary<string, string>
 		{
