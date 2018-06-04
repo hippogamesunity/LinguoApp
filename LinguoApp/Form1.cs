@@ -23,9 +23,35 @@ namespace LinguoApp
 			{
 				_direction = 0;
 			}
-			else
+
+			Translate();
+		}
+
+		private void radioButton2_CheckedChanged(object sender, EventArgs e)
+		{
+			if ((sender as RadioButton).Checked)
 			{
 				_direction = 1;
+			}
+
+			Translate();
+		}
+
+		private void radioButton3_CheckedChanged(object sender, EventArgs e)
+		{
+			if ((sender as RadioButton).Checked)
+			{
+				_direction = 2;
+			}
+
+			Translate();
+		}
+
+		private void radioButton4_CheckedChanged(object sender, EventArgs e)
+		{
+			if ((sender as RadioButton).Checked)
+			{
+				_direction = 3;
 			}
 
 			Translate();
