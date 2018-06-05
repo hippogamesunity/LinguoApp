@@ -7,6 +7,6 @@
     </address>
 
     <address>
-        <strong>Вспарте:</strong>   <a href="Svaznoyjedi@mail.ru">Svaznoyjedi@mail.ru</a><br />
+        <strong>Вспарте:</strong><a href="Svaznoyjedi@mail.ru">Svaznoyjedi@mail.ru</a><br />
     </address>
 </asp:Content>

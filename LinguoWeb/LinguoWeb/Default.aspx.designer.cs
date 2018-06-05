@@ -10,7 +10,7 @@
 namespace LinguoWeb {
     
     
-    public partial class _Default {
+    public partial class Default {
         
         /// <summary>
         /// DropDownList1 элемент управления.
@@ -22,39 +22,39 @@ namespace LinguoWeb {
         protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
         
         /// <summary>
-        /// TextBox1 элемент управления.
+        /// TextBoxInput элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxInput;
         
         /// <summary>
-        /// TextBox2 элемент управления.
+        /// TextBoxResult элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxResult;
         
         /// <summary>
-        /// Button1 элемент управления.
+        /// TranslateButton элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button TranslateButton;
         
         /// <summary>
-        /// Button2 элемент управления.
+        /// TranslateBackButton элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Button TranslateBackButton;
     }
 }

@@ -4,43 +4,48 @@ using LinguoApp;
 
 namespace LinguoWeb
 {
-	public partial class _Default : Page
+	public partial class Default : Page
 	{
-		protected void Button1_Click(object sender, EventArgs e)
+		protected void Page_Load(object sender, EventArgs e)
+		{
+			var lang = Request["lang"];
+
+			if (lang != null) Localization.Language = Request["lang"];
+
+			TranslateButton.Text = Localization.Localize("Translate");
+			TranslateBackButton.Text = Localization.Localize("TranslateBack");
+		}
+		
+		protected void Translate(object sender, EventArgs e)
 		{
 			switch (DropDownList1.SelectedIndex)
 			{
 				case 0:
-					TextBox2.Text = TranslatorLatinCyrillicPL.Translate(TextBox1.Text);
+					TextBoxResult.Text = TranslatorLatinCyrillicPL.Translate(TextBoxInput.Text);
 					break;
 				case 1:
-					TextBox2.Text = TranslatorLatinCyrillicCZ.Translate(TextBox1.Text);
+					TextBoxResult.Text = TranslatorLatinCyrillicCZ.Translate(TextBoxInput.Text);
 					break;
 				default:
-					TextBox2.Text = "Language is not supported.";
+					TextBoxResult.Text = "Language is not supported.";
 					break;
 			}
 		}
 
-		protected void Button2_Click(object sender, EventArgs e)
+		protected void TranslateBack(object sender, EventArgs e)
 		{
 			switch (DropDownList1.SelectedIndex)
 			{
 				case 0:
-					TextBox2.Text = TranslatorCyrillicLatinPL.Translate(TextBox1.Text);
+					TextBoxInput.Text = TranslatorCyrillicLatinPL.Translate(TextBoxResult.Text);
 					break;
 				case 1:
-					TextBox2.Text = TranslatorCyrillicLatinCZ.Translate(TextBox1.Text);
+					TextBoxInput.Text = TranslatorCyrillicLatinCZ.Translate(TextBoxResult.Text);
 					break;
 				default:
-					TextBox2.Text = "Language is not supported.";
+					TextBoxInput.Text = "Language is not supported.";
 					break;
 			}
 		}
-
-        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
