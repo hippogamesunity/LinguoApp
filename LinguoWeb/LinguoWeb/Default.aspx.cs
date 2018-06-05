@@ -18,32 +18,32 @@ namespace LinguoWeb
 		
 		protected void Translate(object sender, EventArgs e)
 		{
-			switch (DropDownList1.SelectedIndex)
+			switch (Localization.Language)
 			{
-				case 0:
+				case "PL":
 					TextBoxResult.Text = TranslatorLatinCyrillicPL.Translate(TextBoxInput.Text);
 					break;
-				case 1:
+				case "CZ":
 					TextBoxResult.Text = TranslatorLatinCyrillicCZ.Translate(TextBoxInput.Text);
 					break;
 				default:
-					TextBoxResult.Text = "Language is not supported.";
+					TextBoxResult.Text = "Language is not supported: " + Localization.Language;
 					break;
 			}
 		}
 
 		protected void TranslateBack(object sender, EventArgs e)
 		{
-			switch (DropDownList1.SelectedIndex)
+			switch (Localization.Language)
 			{
-				case 0:
+				case "PL":
 					TextBoxInput.Text = TranslatorCyrillicLatinPL.Translate(TextBoxResult.Text);
 					break;
-				case 1:
+				case "CZ":
 					TextBoxInput.Text = TranslatorCyrillicLatinCZ.Translate(TextBoxResult.Text);
 					break;
 				default:
-					TextBoxInput.Text = "Language is not supported.";
+					TextBoxInput.Text = "Language is not supported: " + Localization.Language;
 					break;
 			}
 		}

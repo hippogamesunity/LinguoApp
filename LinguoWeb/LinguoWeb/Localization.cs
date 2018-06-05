@@ -5,7 +5,7 @@ namespace LinguoWeb
 	public static class Localization
 	{
 		public const string DefaultLanguage = "PL";
-		public static string Language;
+		public static string Language = DefaultLanguage;
 		
 		private static readonly Dictionary<string, Dictionary<string, string>> Dictionary = new Dictionary<string, Dictionary<string, string>>
 		{
