@@ -6,7 +6,7 @@ namespace LinguoWeb
 	public static class TranslatorLatinCyrillicCZ
 	{
 		private const string LatinConsonants = "AaÁáEeÉéĚěOoÓóUuÚúŮůYyÝýIiÍí";
-		private const string LatinVowels = "BbCcČčChchDdĎďFfGgHhKkLlMmNnŇňPpQqŘřSsŠšTtŤťVvWwZzŽž";
+		private const string LatinVowels = "BbCcČčChchDdĎďFfGgHhKkLlMmNnŇňPpŘřSsŠšTtŤťVvZzŽž";
 
 		private static readonly Dictionary<string, string> RegexReplace = new Dictionary<string, string>
 		{
@@ -102,8 +102,8 @@ namespace LinguoWeb
             { "U", "У" }, { "u", "у" },
             { "Ú", "У́" }, { "ú", "у́" },
             { "Ů", "Ŏ" }, { "ů", "ŏ" },
-            { "V", "В" + InvisibleChars.A }, { "v", "в" + InvisibleChars.A },
-            { "W", "В" + InvisibleChars.B }, { "w", "в" + InvisibleChars.B },
+            { "V", "В" }, { "v", "в" },
+            { "W", "В" + InvisibleChars.A }, { "w", "в" + InvisibleChars.A },
             { "X", "Кс" + InvisibleChars.A }, { "x", "кс" + InvisibleChars.A },
             { "Z", "З" }, { "z", "з" },
             { "Ž", "Ж" }, { "ž", "ж" },

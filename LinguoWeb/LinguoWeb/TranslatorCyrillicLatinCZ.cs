@@ -16,6 +16,9 @@ namespace LinguoWeb
 
 		private static readonly Dictionary<string, string> SimpleReplace = new Dictionary<string, string>
 		{
+            { "Кс" + InvisibleChars.A, "X" }, { "кс" + InvisibleChars.A, "x" },
+            { "Кв" + InvisibleChars.A, "Q" }, { "кв" + InvisibleChars.A, "q" },
+            { "В" + InvisibleChars.A, "W" }, { "w" + InvisibleChars.A, "w" },
             { "Рі", "Ri" }, { "рі", "ri" },
             { "Рí", "Rí" }, { "рí", "rí" },
             { "Ки", "Ky" }, { "ки", "ky" },
@@ -98,16 +101,13 @@ namespace LinguoWeb
             { "У", "U" }, { "у", "u" },
             { "У́", "Ú" }, { "у́", "ú" },
             { "Ŏ", "Ů" }, { "ŏ", "ů" },
-            { "В" + InvisibleChars.A, "V" }, { "в" + InvisibleChars.A, "v" },
-			{ "В" + InvisibleChars.B, "W" }, { "w" + InvisibleChars.B, "w" },
+            { "В", "V" }, { "в", "v" },
 			{ "Ы", "Y" }, { "ы", "y" },
             { "Ы́", "Ý" }, { "ы́", "ý" },
             { "З", "Z" }, { "з", "z" },
             { "И", "I" }, { "и", "i" },
             { "И́", "Í" }, { "и́", "í" },
             { "Ж", "Ž" }, { "ж", "ž" },
-            { "Кс" + InvisibleChars.A, "X" }, { "кс" + InvisibleChars.A, "x" },
-            { "Кв" + InvisibleChars.A, "Q" }, { "кв" + InvisibleChars.A, "q" },
             { "Ь", "" }, { "ь", "" },
 			{ "Ъ", "" }, { "ъ", "" }
 		};
