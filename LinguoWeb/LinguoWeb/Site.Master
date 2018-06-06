@@ -49,15 +49,16 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/">Translator</a>
+                    <a class="navbar-brand" runat="server" href="~/"><%=Localization.Localize("Translator")%></a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <%--<li><a runat="server" href="~/">Домашняя</a></li>--%>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
-                        <li><a runat="server" href="~/?lang=PL"><%=Localization.Language == "PL" ? "<u>PL</u>" : "PL"%></a></li>
-                        <li><a runat="server" href="~/?lang=CZ"><%=Localization.Language == "CZ" ? "<u>CZ</u>" : "CZ"%></a></li>
+                        <li><a runat="server" href="~/About"><%=Localization.Localize("About")%></a></li>
+                        <li><a runat="server" href="~/Contact"><%=Localization.Localize("Contact")%></a></li>
+                        <li style="width: 100px">&nbsp</li>
+                        <li><a runat="server" href="~/?lang=PL"><img src="Content/flag-poland2x.png" height="20" alt="PL">&nbsp<%=Localization.Language == "PL" ? "<u>PL</u>" : "PL"%></a></li>
+                        <li><a runat="server" href="~/?lang=CZ"><img src="Content/flag-czech-republic2x.png" height="20" alt="CZ">&nbsp<%=Localization.Language == "CZ" ? "<u>CZ</u>" : "CZ"%></a></li>
                     </ul>
                 </div>
             </div>
