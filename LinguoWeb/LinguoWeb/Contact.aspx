@@ -2,6 +2,6 @@
 <%@ Import Namespace="LinguoWeb" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h2><%=Localization.Localize("Contact")%></h2>
-    <h3><%=Localization.Localize("Contact.Text")%></h3>
+    <h3><%=Localization.Localize("Contact")%></h3>
+    <p><%=Localization.Localize("Contact.Text")%></p>
 </asp:Content>
