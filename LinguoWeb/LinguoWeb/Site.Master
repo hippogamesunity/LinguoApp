@@ -68,7 +68,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - транслятор łacina-цырылица </p>
+                <p>&copy; <%: DateTime.Now.Year %> - транслятор латиница-кириллица by &quot;Wolodars&quot;</p>
             </footer>
         </div>
 
