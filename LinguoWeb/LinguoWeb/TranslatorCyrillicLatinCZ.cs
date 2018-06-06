@@ -1,20 +1,20 @@
 ﻿using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-namespace LinguoApp
+namespace LinguoWeb
 {
 	public static class TranslatorCyrillicLatinCZ
 	{
 		private const string CyrillicConsonants = "АаÁáЕеЁёÉéÈèИиЇїОоÓóУуУ́у́ЫыЮюЭэЯяЯ́я́";
 		private const string CyrillicVowels = "БбВвГгҐґЖжЗзКкМмНнПпСсФфХхЦцШшЩщТтДдЛлЧч";
 
-		private static Dictionary<string, string> RegexReplace = new Dictionary<string, string>
+		private static readonly Dictionary<string, string> RegexReplace = new Dictionary<string, string>
 		{
             { "[V]Е", "E" }, { "[V]е", "e" },
             { "[V]É", "É" }, { "[V]é", "é" },           
         };
 
-		private static Dictionary<string, string> SimpleReplace = new Dictionary<string, string>
+		private static readonly Dictionary<string, string> SimpleReplace = new Dictionary<string, string>
 		{
             { "Рі", "Ri" }, { "рі", "ri" },
             { "Рí", "Rí" }, { "рí", "rí" },
@@ -98,8 +98,9 @@ namespace LinguoApp
             { "У", "U" }, { "у", "u" },
             { "У́", "Ú" }, { "у́", "ú" },
             { "Ŏ", "Ů" }, { "ŏ", "ů" },
-            { "В", "V" }, { "в", "v" },
-            { "Ы", "Y" }, { "ы", "y" },
+            { "В" + InvisibleChars.A, "V" }, { "в" + InvisibleChars.A, "v" },
+			{ "В" + InvisibleChars.B, "W" }, { "w" + InvisibleChars.B, "w" },
+			{ "Ы", "Y" }, { "ы", "y" },
             { "Ы́", "Ý" }, { "ы́", "ý" },
             { "З", "Z" }, { "з", "z" },
             { "И", "I" }, { "и", "i" },

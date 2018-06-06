@@ -1,20 +1,20 @@
 ﻿using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-namespace LinguoApp
+namespace LinguoWeb
 {
 	public static class TranslatorLatinCyrillicCZ
 	{
 		private const string LatinConsonants = "AaÁáEeÉéĚěOoÓóUuÚúŮůYyÝýIiÍí";
 		private const string LatinVowels = "BbCcČčChchDdĎďFfGgHhKkLlMmNnŇňPpQqŘřSsŠšTtŤťVvWwZzŽž";
 
-		private static Dictionary<string, string> RegexReplace = new Dictionary<string, string>
+		private static readonly Dictionary<string, string> RegexReplace = new Dictionary<string, string>
 		{
             { "[V]E", "Е" }, { "[V]e", "е" },
             { "[V]É", "Е́" }, { "[V]é", "е́" },
         };
 
-		private static Dictionary<string, string> SimpleReplace = new Dictionary<string, string>
+		private static readonly Dictionary<string, string> SimpleReplace = new Dictionary<string, string>
 		{
 			{ "Št", "Щ" }, { "št", "щ" },
             { "Ch", "Х" }, { "ch", "х" },
@@ -102,8 +102,8 @@ namespace LinguoApp
             { "U", "У" }, { "u", "у" },
             { "Ú", "У́" }, { "ú", "у́" },
             { "Ů", "Ŏ" }, { "ů", "ŏ" },
-            { "V", "В" }, { "v", "в" },
-            { "W", "В" }, { "w", "в" },
+            { "V", "В" + InvisibleChars.A }, { "v", "в" + InvisibleChars.A },
+            { "W", "В" + InvisibleChars.B }, { "w", "в" + InvisibleChars.B },
             { "X", "Кс" }, { "x", "кс" },
             { "Z", "З" }, { "z", "з" },
             { "Ž", "Ж" }, { "ž", "ж" },
