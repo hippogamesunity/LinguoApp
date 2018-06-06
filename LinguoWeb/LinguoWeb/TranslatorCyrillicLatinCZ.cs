@@ -113,7 +113,7 @@ namespace LinguoApp
 		{
 			var result = input;
 
-			result = ReplaceRomanNumbers(result);
+			//result = ReplaceRomanNumbers(result);
 
 			foreach (var entry in RegexReplace)
 			{
@@ -135,7 +135,7 @@ namespace LinguoApp
 				result = result.Replace(entry.Key, entry.Value);
 			}
 
-			result = RestoreRomanNumbers(result);
+			//result = RestoreRomanNumbers(result);
 
 			return result;
 		}
