@@ -106,6 +106,8 @@ namespace LinguoWeb
             { "И", "I" }, { "и", "i" },
             { "И́", "Í" }, { "и́", "í" },
             { "Ж", "Ž" }, { "ж", "ž" },
+            { "Кс" + InvisibleChars.A, "X" }, { "кс" + InvisibleChars.A, "x" },
+            { "Кв" + InvisibleChars.A, "Q" }, { "кв" + InvisibleChars.A, "q" },
             { "Ь", "" }, { "ь", "" },
 			{ "Ъ", "" }, { "ъ", "" }
 		};
