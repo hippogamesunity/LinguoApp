@@ -1,9 +1,8 @@
-﻿<%@ Page Title="Глóвна" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="LinguoWeb.Default" %>
+﻿<%@ Page Title="Translator" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="LinguoWeb.Default" %>
 <%@ Import Namespace="LinguoWeb" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <table>
-        <tr>
             <tr>
             <td style="text-align: center"><%=Localization.Localize("Latin")%></td>
             <td style="text-align: center"><%=Localization.Localize("Cyrillic")%></td>
