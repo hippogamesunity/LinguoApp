@@ -6,7 +6,7 @@ namespace LinguoWeb
 	public static class TranslatorCyrillicLatinPL
 	{
 		private const string CyrillicConsonants = "АаЕеЁёÉéИиЇїОоÓóУуЫыЮюѪѫѬѭЭэѦѧѨѩЯя";
-		private const string CyrillicVowels = "БбВвГгҐґЖжЗзКкМмНнПпСсФфХхЦц";
+		private const string CyrillicVowels = "БбВвГгҐґЗзКкМмНнПпСсФфХхЦц";
 
 		private static readonly Dictionary<string, string> RegexReplace = new Dictionary<string, string>
 		{
