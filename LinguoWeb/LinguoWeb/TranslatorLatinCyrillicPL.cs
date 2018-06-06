@@ -1,14 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-namespace LinguoApp
+namespace LinguoWeb
 {
 	public static class TranslatorLatinCyrillicPL
 	{
 		private const string LatinConsonants = "AaĄąEeĘęOoÓóUuYyIi";
 		private const string LatinVowels = "BbCcChchCzczĆćDdDźdźFfGgHhKkLlŁłMmNnŃńPpRrRzrzSsSzszŚśTtWwZzŹźŻż";
 
-		private static Dictionary<string, string> RegexReplace = new Dictionary<string, string>
+		private static readonly Dictionary<string, string> RegexReplace = new Dictionary<string, string>
 		{
             { "[V]JA", "ЪЯ" }, { "[V]ja", "ъя" },
             { "[V]JĄ", "ЪѬ" }, { "[V]ją", "ъѭ" },
@@ -20,7 +20,7 @@ namespace LinguoApp
             { "[V]JI", "ЪЇ" }, { "[V]ji", "ъї" },         
         };
 
-		private static Dictionary<string, string> SimpleReplace = new Dictionary<string, string>
+		private static readonly Dictionary<string, string> SimpleReplace = new Dictionary<string, string>
 		{
 			{ "Klawiatur", "Клявиатур" }, { "klawiatur", "клявиатур" },
             { "Ri", "Ри" }, { "ri", "ри" },

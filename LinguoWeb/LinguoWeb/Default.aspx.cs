@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Web.UI;
-using LinguoApp;
 
 namespace LinguoWeb
 {
