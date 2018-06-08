@@ -214,6 +214,7 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
+    <Compile Include="TranslatorBase.cs" />
     <Compile Include="TranslatorCyrillicLatinCZ.cs" />
     <Compile Include="TranslatorCyrillicLatinPL.cs" />
     <Compile Include="TranslatorLatinCyrillicCZ.cs" />
