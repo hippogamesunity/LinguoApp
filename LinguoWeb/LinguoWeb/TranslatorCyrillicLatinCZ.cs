@@ -147,7 +147,7 @@ namespace LinguoWeb
 
 		private static string ReplaceRomanNumbers(string result)
 		{
-			foreach (Match match in Regex.Matches(result, @"([IÎVX]+)(\W+|$)"))
+			foreach (Match match in Regex.Matches(result, @" ([IÎVX]+)(\W+|$)"))
 			{
 				var hash = match.Groups[1].GetHashCode();
 
