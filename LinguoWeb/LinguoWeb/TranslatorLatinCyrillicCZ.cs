@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 
 namespace LinguoWeb
 {
-	public static class TranslatorLatinCyrillicCZ
+	public class TranslatorLatinCyrillicCZ : TranslatorBase
 	{
 		private const string LatinConsonants = "AaÁáEeÉéĚěOoÓóUuÚúŮůYyÝýIiÍí";
 		private const string LatinVowels = "BbCcČčChchDdĎďFfGgHhKkLlMmNnŇňPpŘřSsŠšTtŤťVvZzŽž";
@@ -138,32 +138,6 @@ namespace LinguoWeb
 			}
 
 			//result = RestoreRomanNumbers(result);
-
-			return result;
-		}
-
-		private static readonly Dictionary<int, string> Romans = new Dictionary<int, string>();
-
-		private static string ReplaceRomanNumbers(string result)
-		{
-			foreach (Match match in Regex.Matches(result, @"([IÎVX]+)(\W+|$)"))
-			{
-				var hash = match.Groups[1].GetHashCode();
-
-				if (!Romans.ContainsKey(hash)) Romans.Add(hash, match.Groups[1].Value);
-
-				result = result.Replace(match.Groups[1].Value, "[#" + hash + "]");
-			}
-
-			return result;
-		}
-
-		private static string RestoreRomanNumbers(string result)
-		{
-			foreach (Match match in Regex.Matches(result, @"\[#(\d+)\]"))
-			{
-				result = result.Replace(match.Groups[0].Value, Romans[int.Parse(match.Groups[1].Value)]);
-			}
 
 			return result;
 		}
